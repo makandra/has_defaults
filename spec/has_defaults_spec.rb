@@ -4,34 +4,46 @@ describe "has_defaults" do
 
   context "given a model with defaults" do
 
-    before(:each) do
-      @donut = create_donut
-      @new_donut = Donut.new
-    end
-    
     it "should set defaults" do
-      @new_donut.flavor.should == "cream"
-      @new_donut.name.should == "Cream"
+      new_donut = Donut.new
+      new_donut.flavor.should == "cream"
+      new_donut.name.should == "Cream"
     end
     
     it "should merge multiple has_defaults directives" do
-      @new_donut.maker.should == "Dunkin Donuts"
+      new_donut = Donut.new
+      new_donut.maker.should == "Dunkin Donuts"
     end
     
     it "should set defaults only if attributes are blank" do
-      @donut.flavor.should == "vanilla"
+      donut = Donut.new(:flavor => 'vanilla')
+      donut.flavor.should == "vanilla"
     end
     
     it "should return default value for an attribute" do
-      @donut.default_for(:flavor).should == "cream"
+      Donut.new.default_for(:flavor).should == "cream"
     end
     
-    it "should not set defaults on a saved record" do
+    it "should not set defaults when loading a saved record" do
+      Donut.create(:flavor => "vanilla")
       Donut.first.flavor.should == "vanilla"
     end
   
     it "should define #after_initialize" do
-      @donut.should respond_to(:after_initialize)
+      donut = Donut.new
+      donut.should respond_to(:after_initialize)
+    end
+    
+    it "should not redefine defaults in its superclass" do
+      pastry = Pastry.new
+      pastry.maker.should == 'Mom'
+      pastry.default_for(:maker).should == 'Mom'
+    end
+    
+    it "should respect defaults from its superclass" do
+      donut = Donut.create
+      donut.main_ingredient.should == 'flour'
+      donut.maker.should_not == 'Mom'
     end
     
   end
@@ -44,10 +56,5 @@ describe "has_defaults" do
   
   end
   
-  private
-  
-  def create_donut(options={})
-    Donut.create({:flavor => "vanilla", :name => "Vanilla Sky", :maker => "Mr. Baker"}.merge(options))
-  end
   
 end
