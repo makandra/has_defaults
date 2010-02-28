@@ -33,13 +33,13 @@ describe "has_defaults" do
     
   end
   
-#  context "given a model without defaults" do
-#  
-#    it "should not define #after_initialize" do
-#      ModelWithoutDefaults.new.should_not respond_to(:after_initialize)
-#    end
-#  
-#  end
+  context "given a model without defaults" do
+  
+    it "should not define #after_initialize so initialization remains fast" do
+      ModelWithoutDefaults.new.should_not respond_to(:after_initialize)
+    end
+  
+  end
   
   private
   

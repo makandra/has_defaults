@@ -17,6 +17,16 @@ module SimplesIdeias
           include SimplesIdeias::Acts::Defaults::InstanceMethods
           
           self.has_defaults_options = attrs
+          
+          # ActiveRecord only calls after_initialize callbacks only if is
+          # explicit defined in a class. We should however only define that
+          # callback if a default has been set, as it really slow downs Rails.
+          unless method_defined?(:after_initialize)
+            define_method(:after_initialize) {}
+          else
+            puts "Already defined"
+          end
+          
           after_initialize :set_default_attributes
         end
       end

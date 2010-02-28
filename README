@@ -4,7 +4,7 @@ has_defaults
 INSTALATION
 -----------
 
-1) Install the plugin with `script/plugin install git://github.com/fnando/has_defaults.git`
+1) Install the plugin with `script/plugin install git://github.com/makandra/has_defaults.git`
 
 USAGE
 -----
@@ -38,6 +38,7 @@ MAINTAINER
 ----------
 
 * Nando Vieira (<http://simplesideias.com.br>)
+* Patches in this fork by Henning Koch (<http://www.makandra.de/>)
 
 LICENSE:
 --------
