@@ -1,35 +1,20 @@
-ENV["RAILS_ENV"] = "test"
+$: << File.join(File.dirname(__FILE__), "/../lib" )
 
-require File.dirname(__FILE__) + "/../../../../config/environment"
-require "spec"
-require "spec/rails"
+# Set the default environment to sqlite3's in_memory database
+ENV['RAILS_ENV'] ||= 'in_memory'
 
-begin
-  require "ruby-debug"
-rescue LoadError
-  puts "== ruby-debug is not installed"
-end
+# Load the Rails environment and testing framework
+require "#{File.dirname(__FILE__)}/app_root/config/environment"
+require "#{File.dirname(__FILE__)}/../init"
+require 'spec/rails'
 
-ActiveRecord::Base.configurations = {"test" => {:adapter => "sqlite3", :database => ":memory:"}}
-ActiveRecord::Base.establish_connection(ActiveRecord::Base.configurations["test"])
+# Undo changes to RAILS_ENV
+silence_warnings {RAILS_ENV = ENV['RAILS_ENV']}
 
-load File.dirname(__FILE__) + "/schema.rb"
+# Run the migrations
+ActiveRecord::Migrator.migrate("#{Rails.root}/db/migrate")
 
 Spec::Runner.configure do |config|
   config.use_transactional_fixtures = true
   config.use_instantiated_fixtures  = false
-  config.fixture_path = File.dirname(__FILE__) + "/fixtures/"
 end
-
-class Object
-  def self.unset_class(*args)
-    class_eval do 
-      args.each do |klass|
-        eval(klass) rescue nil
-        remove_const(klass) if const_defined?(klass)
-      end
-    end
-  end
-end
-
-alias :doing :lambda
