@@ -3,10 +3,6 @@ module SimplesIdeias
     module Defaults
       def self.included(base)
         base.extend ClassMethods
-        
-        # class << base
-        #  attr_accessor :has_defaults_options
-        #end
       end
       
       module ClassMethods
