@@ -12,6 +12,9 @@ describe "has_defaults" do
     it "should set defaults" do
       @new_donut.flavor.should == "cream"
       @new_donut.name.should == "Cream"
+    end
+    
+    it "should merge multiple has_defaults directives" do
       @new_donut.maker.should == "Dunkin Donuts"
     end
     

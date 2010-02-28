@@ -16,7 +16,8 @@ module SimplesIdeias
           
           include SimplesIdeias::Acts::Defaults::InstanceMethods
           
-          self.has_defaults_options = attrs
+          self.has_defaults_options ||= {}
+          self.has_defaults_options.merge!(attrs)
           
           # ActiveRecord only calls after_initialize callbacks only if is
           # explicit defined in a class. We should however only define that
