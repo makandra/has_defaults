@@ -9,7 +9,12 @@ describe "has_defaults" do
       new_donut.flavor.should == "cream"
       new_donut.name.should == "Cream"
     end
-    
+
+    it "should use setters methods to set the defaults" do
+      new_donut = Donut.new
+      new_donut.instance_variable_get('@flavor_setter_called').should be_true
+    end
+
     it "should merge multiple has_defaults directives" do
       new_donut = Donut.new
       new_donut.maker.should == "Dunkin Donuts"
@@ -20,10 +25,15 @@ describe "has_defaults" do
       donut.flavor.should == "vanilla"
     end
     
+    it "should use getters methods to check if an attribute is blank" do
+      new_donut = Donut.new
+      new_donut.instance_variable_get('@flavor_getter_called').should be_true 
+    end
+
     it "should return default value for an attribute" do
       Donut.new.default_for(:flavor).should == "cream"
     end
-    
+
     it "should not set defaults when loading a saved record" do
       Donut.create(:flavor => "vanilla")
       Donut.first.flavor.should == "vanilla"

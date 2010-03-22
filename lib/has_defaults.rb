@@ -43,7 +43,7 @@ module SimplesIdeias
           if new_record?
             self.class.has_defaults_options.each do |name, value|
               value = value.call if value.respond_to?(:call)
-              write_attribute(name, value) if read_attribute(name).blank?
+              send("#{name}=", value) if send(name).blank?
             end
           end
         end
