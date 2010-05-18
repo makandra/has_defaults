@@ -43,7 +43,7 @@ module SimplesIdeias
           if new_record?
             self.class.has_defaults_options.each do |name, value|
               value = value.call if value.respond_to?(:call)
-              send("#{name}=", value) if send(name).blank?
+              send("#{name}=", value) if send(name).nil?
             end
           end
         end

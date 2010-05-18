@@ -20,12 +20,17 @@ describe "has_defaults" do
       new_donut.maker.should == "Dunkin Donuts"
     end
     
-    it "should set defaults only if attributes are blank" do
+    it "should set defaults only if attributes are nil" do
       donut = Donut.new(:flavor => 'vanilla')
       donut.flavor.should == "vanilla"
     end
+
+    it "should not set a default on an attribute that is set to an empty string" do
+      donut = Donut.new(:flavor => '')
+      donut.flavor.should == ''
+    end
     
-    it "should use getters methods to check if an attribute is blank" do
+    it "should use getters methods to check if an attribute is nil" do
       new_donut = Donut.new
       new_donut.instance_variable_get('@flavor_getter_called').should be_true 
     end
@@ -65,6 +70,5 @@ describe "has_defaults" do
     end
   
   end
-  
   
 end
