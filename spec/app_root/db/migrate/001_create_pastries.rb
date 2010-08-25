@@ -6,6 +6,7 @@ class CreatePastries < ActiveRecord::Migration
       t.string :flavor
       t.string :name
       t.string :maker
+      t.string :weight
       t.string :main_ingredient
     end
   end

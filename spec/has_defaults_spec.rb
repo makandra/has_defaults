@@ -15,6 +15,11 @@ describe "has_defaults" do
       new_donut.instance_variable_get('@flavor_setter_called').should be_true
     end
 
+    it "should call procs in the model context when given as defaults" do
+      new_donut = Donut.new
+      new_donut.weight.should == 'a lot'
+    end
+
     it "should merge multiple has_defaults directives" do
       new_donut = Donut.new
       new_donut.maker.should == "Dunkin Donuts"

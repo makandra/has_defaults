@@ -42,8 +42,10 @@ module SimplesIdeias
         def set_default_attributes
           if new_record?
             self.class.has_defaults_options.each do |name, value|
-              value = value.call if value.respond_to?(:call)
-              send("#{name}=", value) if send(name).nil?
+              if send(name).nil?
+                value = instance_eval(&value) if value.respond_to?(:call)
+                send("#{name}=", value)
+              end
             end
           end
         end
