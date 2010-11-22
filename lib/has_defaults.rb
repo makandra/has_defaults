@@ -19,11 +19,14 @@ module SimplesIdeias
           self.has_defaults_options ||= {}
           self.has_defaults_options.merge!(attrs)
           
-          # ActiveRecord only calls after_initialize callbacks only if is
-          # explicit defined in a class. We should however only define that
-          # callback if a default has been set, as it really slow downs Rails.
-          unless method_defined?(:after_initialize)
-            define_method(:after_initialize) {}
+          
+          if Rails.version < '3'
+            # ActiveRecord only calls after_initialize callbacks only if is
+            # explicit defined in a class. We should however only define that
+            # callback if a default has been set, as it really slow downs Rails.
+            unless method_defined?(:after_initialize)
+              define_method(:after_initialize) {}
+            end
           end
           
           after_initialize :set_default_attributes
