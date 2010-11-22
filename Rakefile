@@ -2,10 +2,15 @@ require 'rake'
 require 'spec/rake/spectask'
 
 desc 'Default: Run all specs.'
-task :default => :spec
+task :default => :all_specs
 
 desc "Run all specs"
-Spec::Rake::SpecTask.new() do |t|
-  t.spec_opts = ['--options', "\"spec/spec.opts\""]
-  t.spec_files = FileList['spec/**/*_spec.rb']
+task :all_specs do
+  Dir['spec/**/Rakefile'].each do |rakefile|
+    directory_name = File.dirname(rakefile)
+    sh <<-CMD
+      cd #{directory_name} 
+      bundle exec rake
+    CMD
+  end
 end
