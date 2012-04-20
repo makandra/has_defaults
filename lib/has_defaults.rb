@@ -13,7 +13,7 @@ module SimplesIdeias
           include SimplesIdeias::Acts::Defaults::InstanceMethods
           
           unless respond_to?(:has_defaults_options)
-            class_inheritable_hash :has_defaults_options
+            class_attribute :has_defaults_options
           end
 
           self.has_defaults_options ||= {}
