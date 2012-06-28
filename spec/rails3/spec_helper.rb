@@ -6,7 +6,7 @@ ENV['RAILS_ROOT'] = 'app_root'
 
 # Load the Rails environment and testing framework
 require "#{File.dirname(__FILE__)}/app_root/config/environment"
-require "#{File.dirname(__FILE__)}/../../init"
+require "#{File.dirname(__FILE__)}/../../lib/has_defaults"
 require 'rspec/rails'
 
 # Undo changes to RAILS_ENV

@@ -1,0 +1,147 @@
+# Logfile created on Mon Mar 22 10:14:11 +0100 2010  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePastries (1)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "pastries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "flavor" varchar(255), "name" varchar(255), "maker" varchar(255), "main_ingredient" varchar(255)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+Migrating to CreateModelWithoutDefaults (2)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "model_without_defaults" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('2')[0m
+  [4;36;1mDonut Create (0.1ms)[0m   [0;1mINSERT INTO "pastries" ("name", "main_ingredient", "type", "maker", "flavor") VALUES('Cream', 'flour', 'Donut', 'Dunkin Donuts', 'vanilla')[0m
+  [4;35;1mDonut Load (0.3ms)[0m   [0mSELECT * FROM "pastries" WHERE ( ("pastries"."type" = 'Donut' ) ) LIMIT 1[0m
+  [4;36;1mDonut Create (0.1ms)[0m   [0;1mINSERT INTO "pastries" ("name", "main_ingredient", "type", "maker", "flavor") VALUES('Cream', 'flour', 'Donut', 'Dunkin Donuts', 'cream')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePastries (1)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "pastries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "flavor" varchar(255), "name" varchar(255), "maker" varchar(255), "main_ingredient" varchar(255)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+Migrating to CreateModelWithoutDefaults (2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE TABLE "model_without_defaults" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('2')[0m
+  [4;36;1mDonut Create (0.1ms)[0m   [0;1mINSERT INTO "pastries" ("name", "main_ingredient", "type", "maker", "flavor") VALUES('Cream', 'flour', 'Donut', 'Dunkin Donuts', 'vanilla')[0m
+  [4;35;1mDonut Load (0.3ms)[0m   [0mSELECT * FROM "pastries" WHERE ( ("pastries"."type" = 'Donut' ) ) LIMIT 1[0m
+  [4;36;1mDonut Create (0.1ms)[0m   [0;1mINSERT INTO "pastries" ("name", "main_ingredient", "type", "maker", "flavor") VALUES('Cream', 'flour', 'Donut', 'Dunkin Donuts', 'cream')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePastries (1)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "pastries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "flavor" varchar(255), "name" varchar(255), "maker" varchar(255), "main_ingredient" varchar(255)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+Migrating to CreateModelWithoutDefaults (2)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "model_without_defaults" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('2')[0m
+  [4;36;1mDonut Create (0.1ms)[0m   [0;1mINSERT INTO "pastries" ("name", "main_ingredient", "type", "maker", "flavor") VALUES('Cream', 'flour', 'Donut', 'Dunkin Donuts', 'vanilla')[0m
+  [4;35;1mDonut Load (0.3ms)[0m   [0mSELECT * FROM "pastries" WHERE ( ("pastries"."type" = 'Donut' ) ) LIMIT 1[0m
+  [4;36;1mDonut Create (0.1ms)[0m   [0;1mINSERT INTO "pastries" ("name", "main_ingredient", "type", "maker", "flavor") VALUES('Cream', 'flour', 'Donut', 'Dunkin Donuts', 'cream')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePastries (1)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "pastries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "flavor" varchar(255), "name" varchar(255), "maker" varchar(255), "main_ingredient" varchar(255)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+Migrating to CreateModelWithoutDefaults (2)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mCREATE TABLE "model_without_defaults" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('2')[0m
+  [4;36;1mDonut Create (0.1ms)[0m   [0;1mINSERT INTO "pastries" ("name", "main_ingredient", "type", "maker", "flavor") VALUES('Cream', 'flour', 'Donut', 'Dunkin Donuts', 'vanilla')[0m
+  [4;35;1mDonut Load (0.3ms)[0m   [0mSELECT * FROM "pastries" WHERE ( ("pastries"."type" = 'Donut' ) ) LIMIT 1[0m
+  [4;36;1mDonut Create (0.1ms)[0m   [0;1mINSERT INTO "pastries" ("name", "main_ingredient", "type", "maker", "flavor") VALUES('Cream', 'flour', 'Donut', 'Dunkin Donuts', 'cream')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePastries (1)
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE TABLE "pastries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "flavor" varchar(255), "name" varchar(255), "maker" varchar(255), "main_ingredient" varchar(255)) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+Migrating to CreateModelWithoutDefaults (2)
+  [4;36;1mSQL (0.6ms)[0m   [0;1mCREATE TABLE "model_without_defaults" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('2')[0m
+  [4;36;1mDonut Create (0.1ms)[0m   [0;1mINSERT INTO "pastries" ("name", "main_ingredient", "type", "maker", "flavor") VALUES('Cream', 'flour', 'Donut', 'Dunkin Donuts', 'vanilla')[0m
+  [4;35;1mDonut Load (0.3ms)[0m   [0mSELECT * FROM "pastries" WHERE ( ("pastries"."type" = 'Donut' ) ) LIMIT 1[0m
+  [4;36;1mDonut Create (0.1ms)[0m   [0;1mINSERT INTO "pastries" ("name", "main_ingredient", "type", "maker", "flavor") VALUES('Cream', 'flour', 'Donut', 'Dunkin Donuts', 'cream')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePastries (1)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "pastries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "flavor" varchar(255), "name" varchar(255), "maker" varchar(255), "main_ingredient" varchar(255)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+Migrating to CreateModelWithoutDefaults (2)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "model_without_defaults" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('2')[0m
+  [4;36;1mDonut Create (0.1ms)[0m   [0;1mINSERT INTO "pastries" ("name", "main_ingredient", "type", "maker", "flavor") VALUES('Cream', 'flour', 'Donut', 'Dunkin Donuts', 'vanilla')[0m
+  [4;35;1mDonut Load (0.3ms)[0m   [0mSELECT * FROM "pastries" WHERE ( ("pastries"."type" = 'Donut' ) ) LIMIT 1[0m
+  [4;36;1mDonut Create (0.1ms)[0m   [0;1mINSERT INTO "pastries" ("name", "main_ingredient", "type", "maker", "flavor") VALUES('Cream', 'flour', 'Donut', 'Dunkin Donuts', 'cream')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePastries (1)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCREATE TABLE "pastries" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "flavor" varchar(255), "name" varchar(255), "maker" varchar(255), "main_ingredient" varchar(255)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('1')[0m
+Migrating to CreateModelWithoutDefaults (2)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCREATE TABLE "model_without_defaults" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('2')[0m
+  [4;36;1mDonut Create (0.1ms)[0m   [0;1mINSERT INTO "pastries" ("name", "main_ingredient", "type", "maker", "flavor") VALUES('Cream', 'flour', 'Donut', 'Dunkin Donuts', 'vanilla')[0m
+  [4;35;1mDonut Load (0.3ms)[0m   [0mSELECT * FROM "pastries" WHERE ( ("pastries"."type" = 'Donut' ) ) LIMIT 1[0m
+  [4;36;1mDonut Create (0.1ms)[0m   [0;1mINSERT INTO "pastries" ("name", "main_ingredient", "type", "maker", "flavor") VALUES('Cream', 'flour', 'Donut', 'Dunkin Donuts', 'cream')[0m

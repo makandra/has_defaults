@@ -1,10 +1,19 @@
 has_defaults
 ============
 
-INSTALATION
------------
+Default values for ActiveRecord models.
 
-1) Install the plugin with `script/plugin install git://github.com/makandra/has_defaults.git`
+INSTALLATION
+------------
+
+In your `Gemfile`
+
+    gem 'has_defaults'
+
+Now run
+
+    bundle install
+
 
 USAGE
 -----
@@ -37,7 +46,7 @@ Is **Ruby 1.9** ready!
 MAINTAINER
 ----------
 
-* Nando Vieira (<http://simplesideias.com.br>)
+* Original version by Nando Vieira (<http://simplesideias.com.br>)
 * Patches in this fork by Henning Koch (<http://www.makandra.de/>)
 
 LICENSE:

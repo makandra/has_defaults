@@ -5,7 +5,7 @@ ENV['RAILS_ENV'] ||= 'in_memory'
 
 # Load the Rails environment and testing framework
 require "#{File.dirname(__FILE__)}/app_root/config/environment"
-require "#{File.dirname(__FILE__)}/../../init"
+require "#{File.dirname(__FILE__)}/../../lib/has_defaults"
 require 'spec/rails'
 
 # Undo changes to RAILS_ENV
