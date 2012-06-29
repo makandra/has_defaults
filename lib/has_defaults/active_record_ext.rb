@@ -8,8 +8,14 @@ module HasDefaults
 
         include InstanceMethods
 
-        unless respond_to?(:has_defaults_options)
-          class_inheritable_hash :has_defaults_options
+        if respond_to?(:has_defaults_options)
+          self.has_defaults_options = has_defaults_options.dup
+        else
+          if respond_to?(:class_attribute)
+            class_attribute :has_defaults_options
+          else
+            class_inheritable_hash :has_defaults_options
+          end
         end
 
         self.has_defaults_options ||= {}
