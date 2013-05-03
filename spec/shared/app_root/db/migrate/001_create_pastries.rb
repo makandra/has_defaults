@@ -8,6 +8,7 @@ class CreatePastries < ActiveRecord::Migration
       t.string :maker
       t.string :weight
       t.string :main_ingredient
+      t.string :health_benefits
     end
   end
 

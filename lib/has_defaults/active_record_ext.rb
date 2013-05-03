@@ -43,20 +43,29 @@ module HasDefaults
     module InstanceMethods
 
       def default_for(name)
-        self.class.has_defaults_options[name.to_sym]
+        raw_value = self.class.has_defaults_options[name.to_sym]
+        evaluate_raw_default_value(raw_value)
       end
 
       private
 
       def set_default_attributes
         if new_record?
-          self.class.has_defaults_options.each do |name, value|
+          self.class.has_defaults_options.each do |name, raw_value|
             if send(name).nil?
-              value = instance_eval(&value) if value.respond_to?(:call)
+              value = evaluate_raw_default_value(raw_value)
               send("#{name}=", value)
             end
           end
         end
+      end
+
+      def evaluate_raw_default_value(raw_value)
+        value = raw_value
+        if value.respond_to?(:call)
+          value = instance_eval(&value)
+        end
+        value
       end
 
     end
