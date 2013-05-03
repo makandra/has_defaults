@@ -2,7 +2,7 @@ class Donut < Pastry
 
   has_defaults :flavor => "cream", :name => "Cream"
   has_defaults :maker => proc { "Dunkin Donuts" }
-  has_defaults :weight => proc { weigh }
+  has_defaults :weight => proc { self.class.weigh }
 
   def flavor
     @flavor_getter_called = true
@@ -14,7 +14,7 @@ class Donut < Pastry
     write_attribute(:flavor, value)
   end
 
-  def weigh
+  def self.weigh
     "a lot"
   end
 

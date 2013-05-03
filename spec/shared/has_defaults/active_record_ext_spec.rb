@@ -26,6 +26,11 @@ describe HasDefaults::ActiveRecordExt do
       new_donut.maker.should == "Dunkin Donuts"
     end
 
+    it 'should not assign attributes multiple times when there are multiple has_defaults directives (bugfix)' do
+      Donut.should_receive(:weigh).once
+      Donut.new
+    end
+
     it "should set defaults only if attributes are nil" do
       donut = Donut.new(:flavor => 'vanilla')
       donut.flavor.should == "vanilla"

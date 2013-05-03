@@ -8,14 +8,20 @@ module HasDefaults
 
         include InstanceMethods
 
+        # Check if our parent class had default options, whose accessor we inherited.
+        # In this case we clone the default options as to not modify the options of our parent.
         if respond_to?(:has_defaults_options)
           self.has_defaults_options = has_defaults_options.dup
         else
+          # Rails 3 and 2 have different copy-and-write accessor generators.
           if respond_to?(:class_attribute)
             class_attribute :has_defaults_options
           else
             class_inheritable_hash :has_defaults_options
           end
+          # We only register the callback if we haven't registered it before,
+          # since in this branch we didn't inherit #has_defaults_options
+          after_initialize :set_default_attributes
         end
 
         self.has_defaults_options ||= {}
@@ -30,7 +36,6 @@ module HasDefaults
           end
         end
 
-        after_initialize :set_default_attributes
       end
 
     end
