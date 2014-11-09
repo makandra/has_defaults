@@ -5,6 +5,7 @@ Gem::Specification.new do |s|
   s.name = 'has_defaults'
   s.version = HasDefaults::VERSION
   s.authors = ["Henning Koch"]
+  s.licenses = ["MIT"]
   s.email = 'henning.koch@makandra.de'
   s.homepage = 'https://github.com/makandra/has_defaults'
   s.summary = 'Default values for ActiveRecord models.'
