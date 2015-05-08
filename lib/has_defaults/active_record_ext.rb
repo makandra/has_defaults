@@ -63,7 +63,7 @@ module HasDefaults
       def evaluate_raw_default_value(raw_value)
         value = raw_value
         if value.respond_to?(:call)
-          value = instance_eval(&value)
+          value = instance_exec(&value)
         end
         value
       end

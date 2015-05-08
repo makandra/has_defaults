@@ -1,9 +1,9 @@
 class Donut < Pastry
 
   has_defaults :flavor => "cream", :name => "Cream"
-  has_defaults :maker => proc { "Dunkin Donuts" }
-  has_defaults :weight => proc { weigh }
-  has_defaults :health_benefits => proc { self.class.global_health_benefits }
+  has_defaults :maker => lambda { "Dunkin Donuts" }
+  has_defaults :weight => lambda { weigh }
+  has_defaults :health_benefits => lambda { self.class.global_health_benefits }
 
   def flavor
     @flavor_getter_called = true
