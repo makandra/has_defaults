@@ -1,4 +1,4 @@
-has_defaults
+has_defaults [![Build Status](https://travis-ci.org/makandra/has_defaults.svg?branch=master)](https://travis-ci.org/makandra/has_defaults)
 ============
 
 Default values for ActiveRecord models.

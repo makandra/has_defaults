@@ -1,7 +1,7 @@
 PATH
   remote: ..
   specs:
-    has_defaults (0.4.2)
+    has_defaults (0.4.3)
       activerecord
 
 GEM
