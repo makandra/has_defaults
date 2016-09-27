@@ -1,0 +1,10 @@
+mysql:
+  database: has_defaults_test
+  host: localhost
+  username: root
+  password: secret
+
+postgresql:
+  database: has_defaults_test
+  user:
+  password:

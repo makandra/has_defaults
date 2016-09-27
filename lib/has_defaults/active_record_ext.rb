@@ -1,10 +1,13 @@
 module HasDefaults
+
+  class Error < StandardError; end
+
   module ActiveRecordExt
 
     module ClassMethods
 
       def has_defaults(attrs)
-        raise "Hash expected; #{attrs.class} given." unless attrs.is_a?(Hash)
+        raise Error, "Hash expected; #{attrs.class} given." unless attrs.is_a?(Hash)
 
         include InstanceMethods
 
@@ -27,7 +30,7 @@ module HasDefaults
         self.has_defaults_options ||= {}
         self.has_defaults_options.merge!(attrs)
 
-        if Rails.version < '3'
+        if ActiveRecord::VERSION::MAJOR < 3
           # ActiveRecord only calls after_initialize callbacks only if is
           # explicit defined in a class. We should however only define that
           # callback if a default has been set, as it really slow downs Rails.
@@ -72,3 +75,7 @@ module HasDefaults
 
   end
 end
+
+ActiveRecord::Base.extend(HasDefaults::ActiveRecordExt::ClassMethods)
+
+
