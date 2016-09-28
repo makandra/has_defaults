@@ -1,7 +1,7 @@
 PATH
   remote: ..
   specs:
-    has_defaults (0.4.3)
+    has_defaults (0.4.4)
       activerecord
 
 GEM
@@ -22,8 +22,9 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.3)
     builder (3.2.2)
+    database_cleaner (1.5.3)
     diff-lcs (1.2.5)
-    gemika (0.2.0)
+    gemika (0.3.0)
     i18n (0.7.0)
     json (1.8.3)
     minitest (5.9.0)
@@ -51,6 +52,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (~> 4.2.1)
+  database_cleaner
   gemika (>= 0.2.0)
   has_defaults!
   mysql2 (~> 0.3.17)

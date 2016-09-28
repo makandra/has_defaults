@@ -1,7 +1,7 @@
 PATH
   remote: ..
   specs:
-    has_defaults (0.4.3)
+    has_defaults (0.4.4)
       activerecord
 
 GEM
@@ -10,7 +10,8 @@ GEM
     activerecord (2.3.18)
       activesupport (= 2.3.18)
     activesupport (2.3.18)
-    gemika (0.2.0)
+    database_cleaner (1.0.1)
+    gemika (0.3.0)
     i18n (0.6.11)
     mysql2 (0.2.20)
     rake (10.0.4)
@@ -21,6 +22,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (= 2.3.18)
+  database_cleaner (~> 1.0.0)
   gemika (>= 0.2.0)
   has_defaults!
   i18n (= 0.6.11)
