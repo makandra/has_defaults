@@ -1,5 +1,5 @@
 PATH
-  remote: ..
+  remote: .
   specs:
     has_defaults (0.4.4)
       activerecord

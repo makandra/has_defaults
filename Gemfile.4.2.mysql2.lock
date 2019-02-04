@@ -1,5 +1,5 @@
 PATH
-  remote: ..
+  remote: .
   specs:
     has_defaults (0.4.4)
       activerecord
@@ -7,25 +7,28 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (5.0.0.1)
-      activesupport (= 5.0.0.1)
-    activerecord (5.0.0.1)
-      activemodel (= 5.0.0.1)
-      activesupport (= 5.0.0.1)
-      arel (~> 7.0)
-    activesupport (5.0.0.1)
-      concurrent-ruby (~> 1.0, >= 1.0.2)
+    activemodel (4.2.7.1)
+      activesupport (= 4.2.7.1)
+      builder (~> 3.1)
+    activerecord (4.2.7.1)
+      activemodel (= 4.2.7.1)
+      activesupport (= 4.2.7.1)
+      arel (~> 6.0)
+    activesupport (4.2.7.1)
       i18n (~> 0.7)
+      json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
+      thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    arel (7.1.2)
-    concurrent-ruby (1.0.2)
+    arel (6.0.3)
+    builder (3.2.2)
     database_cleaner (1.5.3)
     diff-lcs (1.2.5)
     gemika (0.3.2)
     i18n (0.7.0)
+    json (1.8.3)
     minitest (5.9.0)
-    pg (0.18.4)
+    mysql2 (0.3.21)
     rake (11.3.0)
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
@@ -48,13 +51,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord (~> 5.0.0)
+  activerecord (~> 4.2.1)
   database_cleaner
   gemika (>= 0.2.0)
   has_defaults!
-  pg (~> 0.18.4)
+  mysql2 (~> 0.3.17)
   rake
-  rspec (~> 3.5)
+  rspec (~> 3.4)
 
 BUNDLED WITH
    1.12.5

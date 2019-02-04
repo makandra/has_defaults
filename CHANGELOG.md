@@ -9,3 +9,4 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 ### Compatible changes
 
 - Added this CHANGELOG file.
+- Drop support for Ruby 1.8.7 and Rails 2.3
