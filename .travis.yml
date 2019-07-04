@@ -12,6 +12,8 @@ gemfile:
   - Gemfile.5.0.mysql2
   - Gemfile.5.0.pg
 
+dist: trusty
+
 matrix:
   exclude:
     - rvm: 2.1.8
