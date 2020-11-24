@@ -50,12 +50,12 @@ There are tests in `spec`. We only accept PRs with tests. To run tests:
 - Install development dependencies using `bundle install`
 - Run tests using `bundle exec rspec`
 
-We recommend to test large changes against multiple versions of Ruby and multiple dependency sets. Supported combinations are configured in `.travis.yml`. We provide some rake tasks to help with this:
+We recommend to test large changes against multiple versions of Ruby and multiple dependency sets. We provide some rake tasks to help with this:
 
 - Install development dependencies using `bundle matrix:install`
 - Run tests using `bundle matrix:spec`
 
-Note that we have configured Travis CI to automatically run tests in all supported Ruby versions and dependency sets after each push. We will only merge pull requests after a green Travis build.
+Note that we have configured Github Actions to automatically run tests in all supported Ruby versions and dependency sets after each push. We will only merge pull requests with successful test runs.
 
 
 Credits
