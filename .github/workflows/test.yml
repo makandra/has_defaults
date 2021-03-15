@@ -61,12 +61,21 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ruby:
-          - 2.2.10
-          - 2.3.8
-        gemfile:
-          - Gemfile.4.2.pg
-          - Gemfile.5.0.pg
+        include:
+        - ruby: 2.2.10
+          gemfile: Gemfile.4.2.pg
+        - ruby: 2.2.10
+          gemfile: Gemfile.5.0.pg
+        - ruby: 2.3.8
+          gemfile: Gemfile.4.2.pg
+        - ruby: 2.3.8
+          gemfile: Gemfile.5.0.pg
+        - ruby: 2.5.3
+          gemfile: Gemfile.5.0.pg
+        - ruby: 2.5.3
+          gemfile: Gemfile.6.1.pg
+        - ruby: 2.6.6
+          gemfile: Gemfile.6.1.pg
     env:
       BUNDLE_GEMFILE: "${{ matrix.gemfile }}"
     steps:
