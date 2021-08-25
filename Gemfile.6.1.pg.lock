@@ -18,6 +18,8 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
       zeitwerk (~> 2.3)
+    byebug (11.1.3)
+    coderay (1.1.3)
     concurrent-ruby (1.1.8)
     database_cleaner (2.0.1)
       database_cleaner-active_record (~> 2.0.0)
@@ -29,8 +31,15 @@ GEM
     gemika (0.5.0)
     i18n (1.8.9)
       concurrent-ruby (~> 1.0)
+    method_source (1.0.0)
     minitest (5.14.4)
     pg (1.2.3)
+    pry (0.13.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    pry-byebug (3.9.0)
+      byebug (~> 11.0)
+      pry (~> 0.13.0)
     rake (13.0.3)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
@@ -58,8 +67,9 @@ DEPENDENCIES
   gemika (>= 0.2.0)
   has_defaults!
   pg (~> 1.1)
+  pry-byebug
   rake
   rspec (~> 3.5)
 
 BUNDLED WITH
-   1.17.3
+   2.2.26
