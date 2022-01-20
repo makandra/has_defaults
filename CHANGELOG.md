@@ -10,6 +10,8 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ### Compatible changes
 
+* Add support for Rails 7 (see [#7](https://github.com/makandra/has_defaults/issues/7))
+
 
 ## 1.0.0 - 2021-08-25
 

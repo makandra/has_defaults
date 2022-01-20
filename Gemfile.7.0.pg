@@ -1,0 +1,15 @@
+source 'https://rubygems.org'
+
+# Runtime dependencies
+gem 'activerecord', '~>7.0.1'
+gem 'pg', '~>1.1'
+
+# Development dependencies
+gem 'rake'
+gem 'database_cleaner'
+gem 'rspec', '~>3.5'
+gem 'gemika', '>= 0.2.0'
+gem 'pry-byebug'
+
+# Gem under test
+gem 'has_defaults', path: '.'
