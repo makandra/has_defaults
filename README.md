@@ -50,7 +50,7 @@ Page.has_defaults_options = {:title => "Here's your new page", :body => "Write y
 
 There are tests in `spec`. We only accept PRs with tests. To run tests:
 
-- Install Ruby 2.5.7
+- Install Ruby 2.7.4
 - Create a local test database `has_defaults_test` in both MySQL and PostgreSQL
 - Copy `spec/support/database.sample.yml` to `spec/support/database.yml` and enter your local credentials for the test databases
 - Install development dependencies using `bundle install`
