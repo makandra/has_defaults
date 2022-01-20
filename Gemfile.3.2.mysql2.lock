@@ -8,7 +8,7 @@ GIT
 PATH
   remote: .
   specs:
-    has_defaults (1.0.0)
+    has_defaults (1.1.0)
       activerecord
 
 GEM
