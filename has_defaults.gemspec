@@ -13,6 +13,7 @@ Gem::Specification.new do |spec|
   spec.description = 'Default values for ActiveRecord models'
   spec.homepage = 'https://github.com/makandra/has_defaults'
   spec.license = 'MIT'
+  spec.metadata = { 'rubygmes_mfa_required' => 'true' }
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
