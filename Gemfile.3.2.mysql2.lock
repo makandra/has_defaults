@@ -8,7 +8,7 @@ GIT
 PATH
   remote: .
   specs:
-    has_defaults (1.1.0)
+    has_defaults (1.1.1)
       activerecord
 
 GEM
@@ -72,4 +72,4 @@ DEPENDENCIES
   rspec (~> 3.4)
 
 BUNDLED WITH
-   2.2.26
+   2.2.32
