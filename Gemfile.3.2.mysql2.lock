@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/makandra/mysql2
-  revision: c920d41e43c4722d4c065d2ea9d21494c560bd85
+  revision: 451c4a666212aa3c5e9f4dbfbe94f49bade4286b
   branch: 0.3.x-lts
   specs:
     mysql2 (0.3.21)

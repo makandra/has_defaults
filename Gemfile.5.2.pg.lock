@@ -63,7 +63,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord
+  activerecord (~> 5)
   activesupport
   database_cleaner
   gemika (>= 0.2.0)
@@ -74,4 +74,4 @@ DEPENDENCIES
   rspec (~> 3.5)
 
 BUNDLED WITH
-   2.3.4
+   2.3.26

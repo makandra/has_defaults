@@ -29,7 +29,7 @@ GEM
       concurrent-ruby (~> 1.0)
     method_source (1.0.0)
     minitest (5.14.2)
-    mysql2 (0.5.3)
+    mysql2 (0.4.10)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -58,14 +58,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord (~> 5.0.0)
+  activerecord (~> 5)
   database_cleaner
   gemika (>= 0.2.0)
   has_defaults!
-  mysql2 (~> 0.5.3)
+  mysql2 (~> 0.4.10)
   pry-byebug
   rake
   rspec (~> 3.5)
 
 BUNDLED WITH
-   2.3.4
+   2.3.26
