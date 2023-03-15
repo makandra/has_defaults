@@ -8,6 +8,13 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ### Breaking changes
 
+### Compatible changes
+
+
+## 1.2.0 - 2023-03-15
+
+### Breaking changes
+
 * Drop support for Ruby 2.5 with Rails 6.1
 
 ### Compatible changes
