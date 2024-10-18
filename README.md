@@ -6,13 +6,13 @@ Default values for ActiveRecord models.
 
 In your `Gemfile`
 
-```
+```rb
 gem 'has_defaults'
 ```
 
 Now run
 
-```
+```sh
 bundle install
 ```
 
@@ -20,7 +20,7 @@ bundle install
 
 Add the method call `has_defaults` to your model.
 
-```
+```rb
 class Page < ActiveRecord::Base
   has_defaults :title => "New page", :body => "Put your text here"
 end
@@ -30,19 +30,19 @@ Attributes will be set only if it's a new record and the attribute is blank.
 
 Retrieve the default attribute with the `default_for` instance method:
 
-```
+```rb
 @page.default_for(:title)
 ```
 
 You can pass Proc as attribute:
 
-```
+```rb
 has_defaults :expires_at => proc { Time.now }
 ```
 
 You can override the default attributes as follow:
 
-```
+```rb
 Page.has_defaults_options = {:title => "Here's your new page", :body => "Write your page text"}
 ```
 
