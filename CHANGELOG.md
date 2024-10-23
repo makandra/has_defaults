@@ -10,6 +10,8 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 
 ### Compatible changes
 
+* Follow recommended way to extend Railties
+
 
 ## 1.2.0 - 2023-03-15
 

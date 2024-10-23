@@ -76,6 +76,6 @@ module HasDefaults
   end
 end
 
-ActiveRecord::Base.extend(HasDefaults::ActiveRecordExt::ClassMethods)
-
-
+ActiveSupport.on_load(:active_record) do
+  extend(HasDefaults::ActiveRecordExt::ClassMethods)
+end
