@@ -52,7 +52,7 @@ jobs:
     - name: Run tests
       run: bundle exec rspec
   test_pg:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     services:
       postgres:
         image: postgres
@@ -80,10 +80,18 @@ jobs:
           gemfile: Gemfile.6.1.pg
         - ruby: 2.7.4
           gemfile: Gemfile.7.0.pg
+        - ruby: 2.7.4
+          gemfile: Gemfile.7.1.pg
         - ruby: 3.2.1
           gemfile: Gemfile.6.1.pg
         - ruby: 3.2.1
           gemfile: Gemfile.7.0.pg
+        - ruby: 3.3.6
+          gemfile: Gemfile.7.0.pg
+        - ruby: 3.3.6
+          gemfile: Gemfile.7.1.pg
+        - ruby: 3.3.6
+          gemfile: Gemfile.7.2.pg
     env:
       BUNDLE_GEMFILE: "${{ matrix.gemfile }}"
     steps:
