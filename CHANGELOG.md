@@ -7,6 +7,13 @@ This project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html
 ## Unreleased
 
 ### Breaking changes
+
+### Compatible changes
+
+
+## 1.3.0 - 2025-01-29
+
+### Breaking changes
 - Drop support for Rails < 6.1. This also drops support for MySQL, which had only been present for Rails < 6.
 
 ### Compatible changes
