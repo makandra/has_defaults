@@ -5,7 +5,7 @@ require "has_defaults/version"
 Gem::Specification.new do |spec|
   spec.name = 'has_defaults'
   spec.version = HasDefaults::VERSION
-  spec.required_ruby_version = '>= 2.3.0'
+  spec.required_ruby_version = '>= 2.7.4'
   spec.authors = ['Henning Koch']
   spec.email = ['henning.koch@makandra.de']
 

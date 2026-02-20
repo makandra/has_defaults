@@ -9,7 +9,7 @@ gem 'rake'
 gem 'database_cleaner'
 gem 'rspec', '~>3.5'
 gem 'gemika', '>=0.8.1'
-gem 'pry-byebug', '>=3.10.1'
+gem 'pry-byebug', '>=3.11.0'
 
 # Gem under test
 gem 'has_defaults', path: '.'
